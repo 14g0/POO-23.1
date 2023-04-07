@@ -22,7 +22,7 @@ public class EX02 {
         estoque[0] = entrada.nextInt();
         estoque[1] = entrada.nextInt();
         estoque[2] = entrada.nextInt();
-
+        System.out.println("\n");
         for(cont=0 ; cont<3 ; cont+=1) {
             disponivel = estoque[cont]-pedidos[cont];
             if(disponivel < 0) {
@@ -30,7 +30,7 @@ public class EX02 {
                 disponivel*-1, opcoes[cont]);
             }
             else {
-                System.out.printf("\033[32mHá refeições suficientes de %s.",
+                System.out.printf("\033[32mHá refeições suficientes de %s.\n",
                 opcoes[cont]);
             }
         }
