@@ -15,8 +15,8 @@ public class Funcionario {
     }
 
     Funcionario(String nome, double salarioHM) {
-        this.nome = nome;
-        this.salarioHoraMinimo = salarioHM;
+        this.atualizarNome(nome);
+        this.atualizarSalarioHora(salarioHM);
         proxID += 1;
     }
 
@@ -32,16 +32,16 @@ public class Funcionario {
 
     /*----------------------------- Set -----------------------------*/
     
-    public void atualizaNome(String nome) {
+    public void atualizarNome(String nome) {
         String[] nomes = nome.split(" ");
 
         if(nomes.length <= 1) {
-            System.out.printf("\033[32mNome inválido\033[m");
+            System.out.println("\033[31mNome inválido\033[m\n");
         }
         else {
             for(String i : nomes) {
                 if(i.length() < 2) {
-                    System.out.println("Nome inválido");
+                    System.out.println("\033[31mNome inválido\033[m");
                     return;
                 }
             }
@@ -49,9 +49,9 @@ public class Funcionario {
         }
     }
     
-    public void atualizaSalarioHora(double salarioHora) {
+    public void atualizarSalarioHora(double salarioHora) {
         if(salarioHora <= this.salarioHora) {
-            System.out.println("Salário menor ou igual ao antigo.");
+            System.out.println("\033[31mSalário menor ou igual ao antigo.\033[m");
         }
         else this.salarioHora = salarioHora;
     }
@@ -66,9 +66,9 @@ public class Funcionario {
         return (this.salarioHora * this.horasTrabalhadasMes);
     }
 
-    public void adicionaDiaDeTrabalho(double horas) {
+    public void adicionarDiaDeTrabalho(double horas) {
         if(horas >= 4) this.horasTrabalhadasMes += horas;
-        else System.out.println("Hora não computada, minímo de 4h.");
+        else System.out.println("\033[31mHora não computada, minímo de 4h.\033[m");
     }
 
     public void printFuncionario() {
