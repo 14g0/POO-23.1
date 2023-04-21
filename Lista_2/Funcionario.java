@@ -11,6 +11,7 @@ public class Funcionario {
 
     Funcionario(String nome) {
         this.nome = nome;
+        this.adicionarDiaDeTrabalho(4);
         proxID += 1;
     }
 
