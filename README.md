@@ -4,4 +4,4 @@ Repositório destinado às listas da matéria, ministrada no primeiro semestre d
 > ## Intruções para a professora :smile:
 > - Em cada lista há um arquivo `Main.java`, que é onde todos os métodos são chamados.
 > - Para compilar só é necessário o `Main.java`.
-> - Para a execução também só é necessário chamar o `Main.java` porque os métodos não são chamados em nenhum outro arquivo.
+> - Para a execução também só é necessário chamar o `java Main` porque os métodos não são chamados em nenhum outro arquivo.
