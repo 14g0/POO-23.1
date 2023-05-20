@@ -1,5 +1,6 @@
+package lista_2;
 public class Funcionario {
-    private String nome = "";
+    private String nome;
 
     double salarioHoraMinimo = 12.5;
     private double salarioHora = salarioHoraMinimo, horasTrabalhadasMes = 0;
@@ -9,13 +10,15 @@ public class Funcionario {
 
     /*------------------------ Construtores -------------------------*/
 
-    Funcionario(String nome) {
+    public Funcionario() {}
+
+    public Funcionario(String nome) {
         this.nome = nome;
         this.adicionarDiaDeTrabalho(4);
         proxID += 1;
     }
 
-    Funcionario(String nome, double salarioHM) {
+    public Funcionario(String nome, double salarioHM) {
         this.atualizarNome(nome);
         this.atualizarSalarioHora(salarioHM);
         proxID += 1;
